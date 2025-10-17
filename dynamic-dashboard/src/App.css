@@ -1,0 +1,25 @@
+div {
+  color: #fff;
+  margin: none;
+  background-color: #222;
+  font-family: sans-serif;
+  width: auto;
+}
+
+header {
+  padding: 20px;
+  background-color: #000;
+}
+
+.dynamic-greeting {
+  margin: 100px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #000;
+}
+
+h1 {
+  color: rgb(101, 116, 255);
+}
