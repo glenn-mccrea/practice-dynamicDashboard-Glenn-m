@@ -1,33 +1,20 @@
 const ToDoList = () => {
   const innerToDo = [
-    { task: "Take dog to vet", isdone: false },
-    { task: "Call Grandma", isdone: true },
-    { task: "Learn React!", isdone: false },
+    { id: "task1", task: "Take dog to vet", isdone: false },
+    { id: "task2", task: "Call Grandma", isdone: true },
+    { id: "task3", task: "Learn React!", isdone: false },
   ];
-
-  const isCompleted = (i) => {
-    return innerToDo[i].isdone ? "✅" : "❌";
-  };
 
   return (
     <ul>
-      <li>
-        <div>
-          {innerToDo[0].task} {isCompleted(0)}
-        </div>
-      </li>
-      <li>
-        <div>
-          {innerToDo[1].task} {isCompleted(1)}
-        </div>
-      </li>
-      <li>
-        <div>
-          {innerToDo[2].task} {isCompleted(2)}
-        </div>
-      </li>
+      {innerToDo.map((doItem, id) => (
+        <li key={id}>
+          <div>
+            {doItem.task} {doItem.isdone ? "✅" : "❌"}
+          </div>
+        </li>
+      ))}
     </ul>
   );
 };
-
 export default ToDoList;
